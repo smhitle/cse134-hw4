@@ -1,0 +1,286 @@
+@import url(vars.css);
+
+/* Font */
+ @font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Regular.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}  
+
+* {
+    box-sizing: content-box;
+}
+
+/* Body and General */
+body {
+    background-color: var(--background-color, #c8c8c8);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: var(--body-size, 1.75em);
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--h1-size, 1.75em);
+}
+
+h2 {
+    font-size: var(--h2-size, 1.3em);
+}
+
+h3 {
+    font-size: var(--h3-size, 1.1em);
+}
+
+h4 {
+    font-size: var(--h4-size, 0.9em);
+}
+
+p, ul, form {
+    font-size: var(--text-size, 0.6em);
+}
+
+main {
+    margin: 2em;
+    background-color: var(--main-color,aliceblue);
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--header-color, #4287f5);
+    align-items: center;
+}
+
+h1 {
+    margin-left: 2em;
+    animation: rainbowColors 5s infinite alternate;
+}
+
+@keyframes rainbowColors {
+    0%{
+        color: red;
+    }
+    14% {
+        color: orange
+    }
+    28% {
+        color: yellow;
+    }
+    42%{
+        color: green;
+    }
+    56%{
+        color: blue;
+    }
+    70%{
+        color: indigo;
+    }
+    100%{
+        color: blueviolet;
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: var(--nav-size, 0.75em);
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--link-color, #afafaf);
+}
+
+nav a:hover {
+    color: var(--link-hover-color, #c8c8c8);
+    text-decoration: underline;
+}
+
+/* About Me */
+
+#about_me {
+    padding: 2em;
+    position: relative;
+}
+
+#about_me h2 {
+    text-align: center;
+    width: 50%;
+}
+
+#about_me p{
+    line-height: 2em;
+    text-align: justify;
+    width: 50%;
+}
+
+#about_me picture {
+    /* float: right; */
+    position: absolute;
+    left: 75%;
+}
+
+/* Education */
+
+#education {
+    clear: both;
+    padding: 2em;
+    position: relative;
+}
+
+#education h2 {
+    text-align: center;
+    width: 50%;
+}
+
+#education h3{
+    text-align: center;
+    width: 50%;
+}
+
+#education h4 {
+    text-align: center;
+    width: 50%;
+}
+
+#education p {
+    text-align: center;
+    width: 50%;
+}
+
+#education picture {
+    position: absolute;
+    left: 75%;
+}
+
+/* Experience */
+
+#experience {
+    clear: both;
+    padding: 2em;
+}
+
+#experience h2 {
+    text-align: center;
+}
+
+#experience h3 {
+    text-align: center;
+}
+
+.project {
+    display: inline-block;
+    width: 50%;
+}
+
+.project h4 {
+    text-align: center;
+}
+
+.project p {
+    text-align: center;
+}
+
+.extra {
+    margin: 0 auto;
+}
+
+.extra h4 {
+    /* width: 50%; */
+    text-align: center;
+}
+
+.extra p {
+    /* width: 50%; */
+    text-align: center;
+}
+
+.extra picture {
+    position: relative;
+    left: 40%;
+}
+
+.extra {
+    margin: 5em;
+}
+
+/* Contact */
+
+#contact {
+    padding: 2em;
+}
+
+#contact h2{
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#contact form label {
+    margin: 1em;
+    width: 100%;
+}
+
+#contact form label input,
+#contact form label textarea {
+    width: 100%;
+}
+
+#contact form button {
+    width: 20vh;
+    height: 5vh;
+    background-color: color(srgb 0.93 0.93 0.9);
+    color: var(--button-text-color, dimgray);
+    border-radius: 5%;
+    transition: background-color 0.5s ease;
+}
+
+#contact form button:hover {
+    background-color: color-mix(in srgb, #000 50%, white);
+    transform: translate(0, -10%);
+}
+
+
+/* Footer */
+
+
+/* Using the has() selector */
+footer:has(p) {
+    text-align: center;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 720px) {
+    .project {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* picture {
+        float: none !important; 
+    } */
+}

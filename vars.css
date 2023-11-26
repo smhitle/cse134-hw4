@@ -1,0 +1,23 @@
+:root {
+    /* Element background colors */
+    --background-color: rgb(200,200,200);
+    --header-color: rgb(0,0,0);
+    --main-color: rgb(240,248,255);
+    --hover-button-color: rgb(150,150,150);
+    --link-color: rgb(175,175,175);
+    --link-hover-color: rgb(200,200,200);
+    --button-color: rgb(245,245,220);
+    --social-color: rgb(50,50,50);
+
+    /* Element text colors */
+    --button-text-color: rgb(105,105,105);
+
+    /* Element text sizes */
+    --body-size: 1.75em;
+    --h1-size: 1.75em;
+    --h2-size: 1.3em;
+    --h3-size: 1.1em;
+    --h4-size: 0.9em;
+    --nav-size: 0.75em;
+    --text-size: 0.6em;
+}

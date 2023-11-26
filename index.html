@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Personal website for Tyler Le">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tyler Le</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about_me">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about_me">
+                <picture>
+                    <source type="image/webp" sizes="(min-width: 640px) 600w"  srcset="mypicture.webp">
+                    <source sizes="(min-width: 640px) 600w," type="image/jpeg" srcset="mypicture.jpg 600w">
+                    <!-- Fallback -->
+                    <img src="mypicture.png" alt="Picture of Tyler" width="200" loading="lazy">
+                </picture>
+                <h2>About Me</h2>
+                <p>Hi, my name is Tyler and I am a student at the University of California, San Diego studying Mathematics-Computer Science. I have interests in many areas of programming, including game development and embedded programming, as well as emerging interests in machine learning. I am expecting to graduate June 2025.</p>
+            </section>
+
+            <section id="education">
+                <!-- This image was retrieved from (https://brand.ucsd.edu/logos/uc-san-diego-seal/index.html) -->
+                <picture>
+                    <source type="image/webp" sizes="(min-width: 640px) 600w" srcset="logo.webp 600w">
+                    <source type="image/jpeg" sizes="(min-width: 640px) 600w" srcset="logo.jpg 600w">
+                    <img src="logo.png" alt="UCSD logo" width="200" loading="lazy">
+                </picture>
+                <h2>Education</h2>
+                <h3>University of California, San Diego</h3>
+                <p>Mathematics-Computer Science, B.S</p>
+                <p>September 2021 - June 2025</p>
+                <h4>Coursework</h4>
+                <p>Objected Oriented Programming, Software Tools, Data Structures, Systems Programming, Discrete Mathematics, Mathematics for Algorithms and Systems Analysis, Theory of Computation, Computer Graphics, Recommender Systems and Data Mining, Web Client Languages Linear Algebra</p>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <h3>Projects</h3>
+                <article id="project1" class="project">
+                    <h4>Bar Chart Racer</h4>
+                    <p>This is like the typical bar chart racers you see on YouTube, basically it takes in data from any range of years and then displays it as a bar chart</p>
+                </article><!--
+            --><article id="project2" class="project">
+                    <h4>Fun with Images</h4>
+                    <p>This project revolves around image manipulation and can do things such as changing the background, flipping a region of the image and applying pixelization filters</p>
+                </article>
+                <h3>Extracirriculars</h3>
+                <article id="extra1" class="extra">
+                    <h4>RoboCup (IEEE at UCSD)</h4>
+                    <!-- This image was retrieved from the RoboCup website (https://ieeeucsd.netlify.app/robocup/) -->
+                    <picture>
+                        <source type="image/webp" sizes="(min-width: 640px) 600w" srcset="robocup.webp 600w">
+                        <source type="image/jpeg" sizes="(min-width: 640px) 600w" srcset="robocup.jpg 600w">
+                        <img src="robocup.png" alt="RoboCup UCSD Team logo" width="200" loading="lazy">
+                    </picture>
+                    <p>TritonBot Developer</p>
+                    <p>Currently working to establish a fast and reliable line of communication between AI and embedded design</p>
+                    <p>Also a general member of Institute of Electrical and Electronics Engineers or IEEE</p>
+                </article>
+                <article id="extra2" class="extra">
+                    <!-- This image was retrieved from the RPL website (https://www.rocketproplab.org/) -->
+                    <h4>Project Daedalus (Rocket Propulsion Laboratory)</h4>
+                    <picture>
+                        <source type="image/webp" sizes="(min-width: 640px) 600w" srcset="rpl.webp 600w">
+                        <source type="image/jpeg" sizes="(min-width: 640px) 600w" srcset="rpl.jpg 600w">
+                        <img src="rpl.PNG" alt="Project Daedalus logo" width="200" loading="lazy">
+                    </picture>
+                    <p>Team Member</p>
+                    <p>Project Daedalus is one of the projects offered by Rocket Propulsion Laboratory which aims to allow students to build a G-class rocket from scratch and launch it</p>
+                </article>
+                <article id="extra3" class="extra">
+                    <h4>Association for Computing Machinery (ACM)</h4>
+                    <!-- This image was retrieved from the ACM website (https://acmucsd.com/) -->
+                    <picture>
+                        <source type="image/webp" sizes="(min-width: 640px) 600w" srcset="ai.webp 600w">
+                        <source type="image/jpeg" sizes="(min-width: 640px) 600w" srcset="ai.jpg 600w">
+                        <img src="ai.png" alt="AI School logo" width="200" loading="lazy">
+                    </picture>
+                    <p>General Member</p>
+                    <p>Currently attending ACM's AI School to learn about machine learning, AI and neural networks</p>
+                    <p>Attended a large variety of events such as socials, workshops and recruitment</p>
+                </article>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <form>
+                    <label for="name">
+                        Name
+                        <input type="text" name="name" id="name" placeholder="Name">
+                    </label>
+
+                    <label for="contact_info">
+                        Your Contact
+                        <input type="text" name="contact_info" id="contact_info" placeholder="Your Contact">
+                    </label>
+
+                    <label for="message">
+                        Your message
+                        <textarea name="message" id="message"></textarea>
+                    </label>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+        
+        <hr>
+        <footer>
+            <p>Made by Tyler Le &hearts;</p>
+        </footer>
+
+    </body>
+</html>
