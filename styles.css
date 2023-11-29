@@ -98,6 +98,10 @@ nav li {
     margin-right: 2em;
 }
 
+nav button {
+    margin-right: 2em;
+}
+
 nav a {
     text-decoration: none;
     color: var(--link-color, #afafaf);
@@ -279,8 +283,65 @@ footer:has(p) {
     }
 }
 
-@media screen and (max-width: 480px) {
-    /* picture {
-        float: none !important; 
-    } */
+/* Toggle */
+
+.light-mode-body {
+    background-color: var(--background-color, #c8c8c8);
+    color: black;
 }
+
+.light-mode-main {
+    background-color: var(--main-color,aliceblue);
+    color: black;
+}
+
+.dark-mode-body {
+    background-color: #373737;
+    color: white;
+}
+
+.dark-mode-main {
+    background-color: #0f0700;
+    color: white;
+}
+
+/* Form Validation */
+
+/* Change to var() */
+
+/* .error-msg {
+    color: red;
+    font-size: 1em;
+    display: none;
+}
+
+.info-msg {
+    color: green;
+    font-size: 1em;
+    display: none;
+}
+
+input:invalid {
+    border: 3px dotted red;
+    background-color: #fcd2e0;
+}
+
+input:valid {
+    background-color: #dbffe5;
+}
+
+input:required:invalid + .error-msg {
+    display: block;
+}
+
+input:required:valid + .error-msg {
+    display: none;
+}
+
+input:required:invalid + .error-msg + .info-msg {
+    display: none;
+}
+
+input:required:valid + .error-msg + .info-msg {
+    display: block;
+} */

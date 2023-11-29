@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Personal website for Tyler Le">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+        <style>
+
+            .good {
+                background-color: lime;
+                color: black;
+            }
+
+            .warning {
+                background-color: yellow;
+                color: black;
+            }
+
+            .max {
+                background-color: red;
+                color: black;
+            }
+
+            #container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+
+            @keyframes fade {
+                0% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            .error {
+                background: red;
+                animation: fade 3s ease-out;
+            }
+
+            .error-msg {
+                opacity: 0;
+            }
+
+        </style>
+        <noscript>
+            <style>
+                .off {
+                    display: none;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <header>
+            <h1>Tyler Le</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about_me">About Me</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="form-no-js.html">No JS Form</a></li>
+                    <li><a href="form-js.html">JS Form</a></li>
+                    <button type="button" id="toggle" class="off" onclick="theme()"></button>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="https://httpbin.org/post" method="post" onsubmit="formSubmit(event)">
+                    <label for="name">
+                        Name
+                        <input type="text" name="name" id="name" placeholder="Name" required autofocus oninput="validateName()" minlength="2" pattern="[A-Za-z ]*">
+                        <output id="name-error" class="error-msg"></output>
+                        <output id="name-info" class="info-msg"></output>
+                    </label>
+
+                    <label for="email">
+                        Email
+                        <input type="email" name="email" id="email" placeholder="Email" required minlength="5" pattern="[A-Za-z0-9@.-_]*" oninput="validateEmail()">
+                        <output id="email-error" class="error-msg"></output>
+                        <output id="email-info" class="info-msg"></output>
+                    </label>
+
+                    <label for="comments">
+                        Comments
+                        <textarea name="comments" id="comments" placeholder="Enter a message" required minlength="2" maxlength="100" pattern="[A-Za-z0-9 !@#$%^&*,.:;`~]*" oninput="validateComment()"></textarea>
+                        <div id="container">
+                            <output id="comments-error" class="error-msg"></output>
+                            <output id="comments-info" class="info-msg"></output>
+                        </div>
+                    </label>
+
+                    <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+
+                    <button type="submit">Send Message</button>
+                    <output id="submit-error"></output>
+                </form>
+            </section>
+        </main>
+        
+        <hr>
+        <footer>
+            <p>Made by Tyler Le &hearts;</p>
+        </footer>
+
+    </body>
+</html>

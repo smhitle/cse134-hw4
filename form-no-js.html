@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Personal website for Tyler Le">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .error-msg {
+                color: red;
+                font-size: 1em;
+                display: none;
+            }
+
+            .info-msg {
+                color: green;
+                font-size: 1em;
+                display: none;
+            }
+
+            input:invalid {
+                border: 3px dotted red;
+                background-color: #fcd2e0;
+            }
+
+            input:valid {
+                background-color: #dbffe5;
+            }
+
+            input:required:invalid + .error-msg {
+                display: block;
+            }
+
+            input:required:valid + .error-msg {
+                display: none;
+            }
+
+            input:required:invalid + .error-msg + .info-msg {
+                display: none;
+            }
+
+            input:required:valid + .error-msg + .info-msg {
+                display: block;
+            }            
+        </style>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Tyler Le</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about_me">About Me</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="form-no-js.html">No JS Form</a></li>
+                    <li><a href="form-js.html">JS Form</a></li>
+                    <button type="button" id="toggle" class="off" onclick="theme()"></button>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- <a href="#">Switch to JavaScript form</a> -->
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="https://httpbin.org/post" method="post">
+                    <label for="name">
+                        Name
+                        <input type="text" name="name" id="name" placeholder="Name" required autofocus>
+                        <output id="name-error" class="error-msg"></output>
+                        <output id="name-info" class="info-msg"></output>
+                    </label>
+
+                    <label for="email">
+                        Email
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <output id="email-error" class="error-msg"></output>
+                        <output id="email-info" class="info-msg"></output>
+                    </label>
+
+                    <label for="comments">
+                        Comments
+                        <input type="text" name="comments" id="comments" placeholder="Send a comment" required maxlength="400" minlength="1" pattern="[A-Za-z0-9 !@#$%^&*,.:;`~]*">
+                        <output id="comments-error" class="error-msg"></output>
+                        <output id="comments-info" class="info-msg"></output>
+                    </label>
+
+                    <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+        
+        <hr>
+        <footer>
+            <p>Made by Tyler Le &hearts;</p>
+        </footer>
+
+    </body>
+</html>

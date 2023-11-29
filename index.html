@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Website</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
     </head>
     <body>
         <header>
@@ -13,10 +14,12 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about_me">About Me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#about_me">About Me</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="form-no-js.html">No JS Form</a></li>
+                    <li><a href="form-js.html">JS Form</a></li>
+                    <button type="button" id="toggle" class="off" onclick="theme()"></button>
                 </ul>
             </nav>
         </header>
@@ -97,27 +100,39 @@
                 </article>
             </section>
 
-            <section id="contact">
+            <!-- <section id="contact">
                 <h2>Contact</h2>
-                <form>
+                <form action="https://httpbin.org/post" method="post">
                     <label for="name">
                         Name
-                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="text" name="name" id="name" placeholder="Name" required>
                     </label>
 
-                    <label for="contact_info">
-                        Your Contact
-                        <input type="text" name="contact_info" id="contact_info" placeholder="Your Contact">
+                    <output id="name-error" class="error-msg"></output>
+                    <output id="name-info" class="info-msg"></output>
+                    
+
+                    <label for="email">
+                        Email
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                     </label>
 
-                    <label for="message">
-                        Your message
-                        <textarea name="message" id="message"></textarea>
+                    <output id="email-error" class="error-msg"></output>
+                    <output id="email-info" class="info-msg"></output>
+
+                    <label for="comments">
+                        Comments
+                        <textarea name="comments" id="comments" required maxlength="300" minlength="1" placeholder="Enter your message" pattern></textarea>
                     </label>
+
+                    <output id="comments-error" class="error-msg"></output>
+                    <output id="comments-info" class="info-msg"></output>
+
+                    <input type="hidden" name="possible_bot" id="possible_bot" value="true">
 
                     <button type="submit">Send Message</button>
                 </form>
-            </section>
+            </section> -->
         </main>
         
         <hr>
