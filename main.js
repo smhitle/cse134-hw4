@@ -13,6 +13,7 @@ window.onload = () => {
 
     if (!ls.getItem("theme")){
         ls.setItem("theme", "light");
+        toggleBtn.textContent = "☀️";
     } else {
         if (ls.getItem("theme") === "light"){
             body.classList.remove("dark-mode-body");
